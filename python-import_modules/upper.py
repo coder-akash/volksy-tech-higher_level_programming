@@ -1,3 +1,2 @@
 def fun():
-    st = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    return st
+    print('ABCDEFGHIJKLMNOPQRSTUVWXYZ')

@@ -5,20 +5,19 @@ if __name__ == '__main__':
     args = argv[1:]
     if len(args) == 3:
         a, b ,c = args
-        match b:
-            case '+':
-                res = add(int(a), int(c))
-            case '-':
-                res = sub(int(a), int(c))
-            case '*':
-                res = add(int(a), int(c))
-            case '/':
-                res = add(int(a), int(c))
-            case _:
-                print("Unknown operator. Available operators: +, -, * and /")
-                exit(1)
-            print('{} {} {} = {}'.format(a, b, c, res))
-            exit()
+        if b == '+':
+            res = add(int(a), int(c))
+        elif b == '-':
+            res = sub(int(a), int(c))
+        elif b == '*':
+            res = add(int(a), int(c))
+        elif b == '/':
+            res = add(int(a), int(c))
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
+        print('{} {} {} = {}'.format(a, b, c, res))
+        exit()
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)

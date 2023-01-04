@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print(upper())
+import upper
+print(upper.fun)

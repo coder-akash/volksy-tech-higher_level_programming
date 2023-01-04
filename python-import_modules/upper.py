@@ -1,3 +1,3 @@
-def fun(a):
+def fun():
     st = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     return st

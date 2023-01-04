@@ -1,2 +1,2 @@
-import temp
-temp.fun('#pythoniscool')
+#!/usr/bin/python3
+__import__(temp)`

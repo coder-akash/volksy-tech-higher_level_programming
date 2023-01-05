@@ -3,7 +3,7 @@ def max_integer(lst):
     if len(lst) == 0:
         return None
     else:
-        max = 0
+        max = -1
         for i in lst:
             if max < i:
                 max = i

@@ -2,5 +2,7 @@
 def print_matrix_integer(mat):
     for i in range(len(mat)):
         for j in mat[i]:
-            print('{:d}'.format(j), end=" ")
-        print()
+            if j == mat[i][-1]:
+                print(j)
+            else:
+                print('{:d}'.format(j), end=" ")

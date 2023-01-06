@@ -3,4 +3,6 @@ def best_score(dic):
     if dic is None:
         return None
     else:
-        return max(dic)
+        for i in dic:
+            if dic[i] == max(dic.values()):
+                return i

@@ -4,9 +4,6 @@ def safe_print_list(l, x):
         for i in l[:x]:
             print(i, end='')
         print()
-        if len(l) < x:
-            return len(l)
-        else:
-            return x
+        return x
     except ValueError:
         pass

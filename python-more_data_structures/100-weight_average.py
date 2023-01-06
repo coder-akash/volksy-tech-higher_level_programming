@@ -8,7 +8,6 @@ def weight_average(lst):
         for i in range(len(lst)):
             mul = 1
             for j in range(len(lst[i])):
-                print(lst[i])
                 if j == 1:
                     add = add + lst[i][j]
                 mul = mul * lst[i][j]

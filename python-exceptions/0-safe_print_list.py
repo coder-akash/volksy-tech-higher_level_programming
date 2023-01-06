@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list(l, x):
     try:
+        c = 0
         for i in l[:x]:
             print(i, end='')
+            c += 1
         print()
-        return x
+        if x > c:
+            return c
+        else:
+            return x
     except ValueError:
         pass

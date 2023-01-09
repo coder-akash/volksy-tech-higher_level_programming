@@ -8,5 +8,5 @@ def safe_print_list_integers(l, x):
                 c += 1
         print()
         return c
-    except IndexError as err:
-        return err
+    except Exception:
+        pass

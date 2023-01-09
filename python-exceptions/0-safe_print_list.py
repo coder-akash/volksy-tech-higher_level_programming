@@ -6,9 +6,6 @@ def safe_print_list(l, x):
             print(i, end='')
             c += 1
         print()
-        if x > c:
-            return c
-        else:
-            return x
-    except ValueError:
+        return c
+    except:
         pass

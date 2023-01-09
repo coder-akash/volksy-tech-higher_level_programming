@@ -3,6 +3,6 @@ def safe_print_integer_err(val):
     try:
         print('{:d}'.format(val))
         return True
-    except ValueError as err:
+    except Exception as err:
         print('Exception: ', err)
         return False

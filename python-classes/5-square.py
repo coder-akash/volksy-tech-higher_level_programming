@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 ''' defining class '''
 
 
@@ -28,7 +27,7 @@ class Square:
 
     def my_print(self):
         if self.__size == 0:
-            print(file=sys.stdout)
+            print()
         else: 
             for i in range(self.__size):
-                print('#' * self.__size, file=sys.stdout)
+                print('#' * self.__size)

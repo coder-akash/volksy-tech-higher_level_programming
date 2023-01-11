@@ -15,5 +15,6 @@ class Square:
                 self.__size = s
         finally:
             pass
+    
     def area(self):
         return self.__size**2

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""defining class which returns area of square"""
+''' defining class '''
 
 
 class Square:
-    """define private attribute with exception handling and returning
-    area of square"""
+    ''' define private attribute with exception handling and returning
+    area of square '''
 
     def __init__(self, s=0):
         try:
@@ -14,7 +14,9 @@ class Square:
                 raise ValueError('size must be >= 0')
             else:
                 self.__size = s
-    
+        finally:
+            pass
+            
     def area(self):
         ''' returning the area of size w.r.t size '''
         return self.__size**2

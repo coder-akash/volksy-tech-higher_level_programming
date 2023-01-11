@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-''' defining class '''
+"""defining class which returns area of square"""
 
 
 class Square:
-    ''' define private attribute with exception handling and returning
-    area of square'''
+    """define private attribute with exception handling and returning
+    area of square"""
+
     def __init__(self, s=0):
         try:
             if type(s) != int:

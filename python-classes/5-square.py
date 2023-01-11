@@ -6,21 +6,20 @@ class Square:
     ''' define private attribute return area (using proprty,setter) and
     print with # size of area'''
     def __init__(self, s=0):
-        self.__size = s
+        self.size = s
 
     @property
     def size(self):
         return self.__size
 
     @size.setter
-    def size(self, val):
-        def size(self, val):
-            if type(val) != int:
+    def size(self, self.size):
+        if type(self.size) != int:
                 raise TypeError('size must be an integer')
-            elif val < 0:
+            elif self.size < 0:
                 raise ValueError('size must be >= 0')
             else:
-                self.__size = val
+                self.__size = self.size
 
     def area(self):
         return self.__size**2

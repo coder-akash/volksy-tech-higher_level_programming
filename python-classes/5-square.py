@@ -6,7 +6,7 @@ class Square:
     ''' define private attribute return area (using proprty,setter) and
     print with # size of area'''
     def __init__(self, s=0):
-        self.size = s
+        self.__size = s
 
     @property
     def size(self):

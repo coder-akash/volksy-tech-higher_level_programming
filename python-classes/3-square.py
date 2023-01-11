@@ -3,7 +3,8 @@
 
 
 class Square:
-    ''' define private attribute with exception handling and returning area of square'''
+    ''' define private attribute with exception handling and returning
+    area of square'''
     def __init__(self, s=0):
         try:
             if type(s) != int:
@@ -14,5 +15,6 @@ class Square:
                 self.__size = s
         finally:
             pass
+    
     def area(self):
         return self.__size**2

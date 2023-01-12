@@ -46,7 +46,7 @@ class Square:
         """ area """
         return self.__size**2
 
-    def my_print(self):
+    def __str__(self):
         """ printing # """
         if self.__size == 0:
             print()
@@ -59,3 +59,4 @@ class Square:
                         print(' '*self.__position[0]+'#'*self.__size)
                     else:
                         print('#' * self.__size)
+        return (" ")

@@ -52,14 +52,12 @@ class Square:
             print()
         else:
             for i in range(self.__size):
-                temp = self.__position[1]
-                if self.__position[0] > 0 and temp > 0:
-                    print(' '*self.__position[0]+'#'*self.__size + ' '*temp)
-                    temp -= 1
+                if self.__position[0] > 0 and self.__position[1] > 0:
+                    print(' '*self.__position[0]+'#'*self.__size + ' '*self.__position[1])
                 elif self.__position[0] > 0:
                     print(' ' * self.__position[0] + '#' * self.__size)
-                elif temp > 0:
-                    print('#'*self.__size + ' '*temp)
-                    temp -= 1
+                elif self.__position[1] > 0:
+                    print('#'*self.__size + ' '*self.__position[1])
                 else:
                     print('#' * self.__size)
+            print()

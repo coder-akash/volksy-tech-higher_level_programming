@@ -1,12 +1,15 @@
 how to use 0-add_integer.py
 this function basically returns addition integer for of a and  b
+::
 
 importing the file
->>>add_integer = __import__('0-add_integer').add_integer
+    >>>add_integer = __import__('0-add_integer').add_integer
 
 case 1: numeric values
->>>add_integer(1, 2)
-   3
+    >>>add_integer(1, 2)
+    3
+
+::
 >>>add_integer(100, -2)
    98
 >>>add_integer(2)

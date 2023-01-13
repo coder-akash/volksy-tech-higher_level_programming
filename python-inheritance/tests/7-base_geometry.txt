@@ -5,7 +5,7 @@ Using '7-base_geometry'
 -----------------------
 
 Import module:
-	>>> BaseGeometry = _import_('7-base_geometry').BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Set bg equal to BaseGeometry():
 	>>> bg = BaseGeometry()

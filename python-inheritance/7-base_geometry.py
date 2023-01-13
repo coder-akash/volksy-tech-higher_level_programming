@@ -13,3 +13,4 @@ class BaseGeometry():
             raise TypeError('%s must be an integer' % name)
         if value <= 0:
             raise ValueError('%s must be greater than 0' % name)
+        return value

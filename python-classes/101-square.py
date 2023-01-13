@@ -4,7 +4,7 @@
 
 class Square:
     """ define private attribute return area (using proprty,setter) and
-    print with # (size of area)also with spaces using position(tuple) """
+    return with # (size of area)also with spaces using position(tuple) """
 
     def __init__(self, s=0, p=(0, 0)):
         """ constructor """
@@ -49,14 +49,19 @@ class Square:
     def __str__(self):
         """ printing # """
         if self.__size == 0:
-            print()
+            return (" ")
         else:
             if self.__position[1] > 0:
                 for k in range(self.__position[1]):
                     print()
             for i in range(self.__size):
                     if self.__position[0] > 0:
-                        print(' '*self.__position[0]+'#'*self.__size)
+                        if i == self.__size - 1:
+                            return(' '*self.__position[0]+'#'*self.__size+' ')
+                        print(' '*self.__position[0]+'#'*self.__size + ' ')
+                        
                     else:
-                        print('#' * self.__size)
-        return (" ")
+                        if i == self.__size - 1:
+                            return ('#' * self.__size + ' ')
+                        else:
+                            print('#' * self.__size + ' ')

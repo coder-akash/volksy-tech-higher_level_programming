@@ -4,5 +4,4 @@
 
 def lookup(obj):
     """ it will return the obj of any type """
-    if type(obj) == list:
-        return obj
+    return dir(obj)

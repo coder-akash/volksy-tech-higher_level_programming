@@ -10,4 +10,4 @@ if __name__ == "__main__":
         vals = load_from_json_file("add_item.json")
         for i in sys.argv[1:]:
             vals.append(i)
-        save_to_json_file(items, "add_item.json")
+        save_to_json_file(vals, "add_item.json")

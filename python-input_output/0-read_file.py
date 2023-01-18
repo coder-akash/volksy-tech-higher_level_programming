@@ -5,4 +5,4 @@
 def read_file(filename=""):
     ''' function '''
     with open(filename, encoding='utf_8') as fp:
-        print(fp.read())
+        return fp.read()

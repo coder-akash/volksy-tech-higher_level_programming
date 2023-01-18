@@ -7,7 +7,7 @@ if __name__ == "__main__":
     load_from_json_file = \
         __import__('6-load_from_json_file').load_from_json_file
 
-    with open('add_item.json','r+') as fp:
+    with open('add_item.json','w+') as fp:
         if len(fp.read()) == 0:
             save_to_json_file([], "add_item.json")
         else:

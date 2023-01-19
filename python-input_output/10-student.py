@@ -8,9 +8,9 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self,attrs=None):
+    def to_json(self, attrs=None):
         ''' function '''
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         else:
             temp = {}

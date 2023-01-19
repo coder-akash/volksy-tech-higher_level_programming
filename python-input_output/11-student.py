@@ -20,4 +20,5 @@ class Student:
             return temp
 
     def reload_from_json(self, json):
-        return json
+        for i, j in json.items():
+            setattr(self, i, j)

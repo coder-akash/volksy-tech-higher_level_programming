@@ -20,4 +20,4 @@ class Student:
             return temp
 
     def reload_from_json(self, json):
-        return self.json
+        return json

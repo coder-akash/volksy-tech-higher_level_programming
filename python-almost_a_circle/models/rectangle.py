@@ -79,7 +79,7 @@ class Rectangle(Base):
             else:
                 print('#' * self.__width)
 
-    def update(self, *args):
+    def update(self, **kwargs):
         ''' update '''
         for i, j in kwargs.items():
             setattr(self, i, j)

@@ -18,6 +18,7 @@ class Square(Rectangle):
         self.height = val
 
     def update(self, *args, **kwargs):
+        ''' update '''
         t = ('id', 'size', 'x', 'y')
         for i in range(len(args)):
             setattr(self, t[i], args[i])

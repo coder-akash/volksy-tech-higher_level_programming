@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" task 2 """
+""" task rectangle """
 from models.base import Base
 
 

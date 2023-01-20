@@ -5,14 +5,14 @@ from models.base import Base
 
 class Rectangle(Base):
     ''' class '''
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         return self.__width
@@ -30,7 +30,7 @@ class Rectangle(Base):
         return self.__y
 
     @width.setter
-    def width(self ,val):
+    def width(self, val):
         self.__width = val
 
     @height.setter

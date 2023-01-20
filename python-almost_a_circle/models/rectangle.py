@@ -81,9 +81,8 @@ class Rectangle(Base):
 
     def update(self, *args):
         ''' update '''
-        t = ('id', 'width', 'height', 'x', 'y')
-        for i in range(len(args)):
-            setattr(self, t[i], args[i])
+        for i, j in kwargs.items():
+            setattr(self, i, j)
 
     def __str__(self):
         return ('[Rectangle] ({}) {}/{} - {}/{}'.format

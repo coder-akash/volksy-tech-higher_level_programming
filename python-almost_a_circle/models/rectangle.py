@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ task 2 """
+import Base
 
 
 class Rectangle(Base):

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ square task """
-from models.rectangle import rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

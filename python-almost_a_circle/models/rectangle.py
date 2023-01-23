@@ -85,6 +85,7 @@ class Rectangle(Base):
             setattr(self, i, j)
 
     def to_dictionary(self):
+        ''' return dict format '''
         return self.__dict__
 
     def __str__(self):

@@ -27,7 +27,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         ''' return dict type '''
-        return {'id':self.id, 'size':self.width, 'x':self.x, 'y':self.y}
+        return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
 
     def __str__(self):
         return ('[Square] ({}) {}/{} - {}'.format

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ task 0 """
+import json as j
 
 
 class Base:
@@ -12,3 +13,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(l_d):
+        return j.dumps(l_d)

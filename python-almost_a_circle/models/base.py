@@ -14,6 +14,15 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
+    def save_to_file(cls, lst_obj):
+        new = [i.to_dictionary() for i in lst_obj]
+        with open(cls.__name__+'.json', 'w') as f:
+            if new is None or len(new) == 0:
+                j.dump([], f)
+            else:
+                j.dump(new, f)
+
     @staticmethod
     def to_json_string(l_d):
         if l_d is None or len(l_d) == 0:

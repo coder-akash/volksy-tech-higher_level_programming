@@ -84,6 +84,9 @@ class Rectangle(Base):
         for i, j in kwargs.items():
             setattr(self, i, j)
 
+    def to_dictionary(self):
+        return self.__dict__
+
     def __str__(self):
         return ('[Rectangle] ({}) {}/{} - {}/{}'.format
                 (self.id, self.__x, self.__y, self.__width, self.__height))

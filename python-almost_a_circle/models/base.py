@@ -32,6 +32,15 @@ class Base:
         n.update(**dictionary)
         return n
 
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__+'.json', "r") as f:
+                lst_d = Base.from_json_string(f.read())
+                return [cls.create(**i) for i in lst_d]
+        except IOError:
+            return []
+
     @staticmethod
     def to_json_string(l_d):
         if l_d is None or len(l_d) == 0:

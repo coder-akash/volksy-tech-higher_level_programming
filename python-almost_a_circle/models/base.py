@@ -29,3 +29,10 @@ class Base:
             return j.dumps([])
         else:
             return j.dumps(l_d)
+
+    @staticmethod
+    def from_json_string(js_str):
+        if len(js_str) == 0 or js_str is None:
+            return []
+        else:
+            return j.loads(js_str)

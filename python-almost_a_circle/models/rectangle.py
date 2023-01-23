@@ -86,7 +86,14 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         ''' return dict format '''
-        return self.__dict__
+        d = self.__dict__
+        new_d = {}
+        for i, j in d.items():
+            if len(i) > 2:
+                new_d[i[12:]] = j
+            else:
+                new_d[i] = j
+        return new_d
 
     def __str__(self):
         return ('[Rectangle] ({}) {}/{} - {}/{}'.format

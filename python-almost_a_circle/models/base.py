@@ -16,9 +16,12 @@ class Base:
 
     @classmethod
     def save_to_file(cls, lst_obj):
-        new = [i.to_dictionary() for i in lst_obj]
         with open(cls.__name__+'.json', 'w'):
-            f.write(Base.to_json_string(new))
+            if lst_obj is None:
+                f.write("[]")
+            else:
+                new = [i.to_dictionary() for i in lst_obj]
+                f.write(Base.to_json_string(new))
 
     @staticmethod
     def to_json_string(l_d):

@@ -17,11 +17,8 @@ class Base:
     @classmethod
     def save_to_file(cls, lst_obj):
         new = [i.to_dictionary() for i in lst_obj]
-        with open(cls.__name__+'.json', 'w') as f:
-            if new is None or len(new) == 0:
-                j.dump([], f)
-            else:
-                j.dump(new, f)
+        with open(cls.__name__+'.json', 'w'):
+            f.write(Base.to_json_string(new))
 
     @staticmethod
     def to_json_string(l_d):

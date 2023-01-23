@@ -25,6 +25,9 @@ class Square(Rectangle):
         for i, j in kwargs.items():
             setattr(self, i, j)
 
+    def to_dictionary(self):
+        return super().to_dictionary()
+
     def __str__(self):
         return ('[Square] ({}) {}/{} - {}'.format
                 (self.id, self.x, self.y, self.width))

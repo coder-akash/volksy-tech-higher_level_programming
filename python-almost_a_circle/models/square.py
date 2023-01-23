@@ -26,6 +26,7 @@ class Square(Rectangle):
             setattr(self, i, j)
 
     def to_dictionary(self):
+        ''' return dict type '''
         return super().to_dictionary()
 
     def __str__(self):

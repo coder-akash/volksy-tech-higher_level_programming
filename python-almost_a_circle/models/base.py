@@ -32,7 +32,7 @@ class Base:
 
     @staticmethod
     def from_json_string(js_str):
-        if len(js_str) == 0 or js_str is None:
+        if js_str is None or len(js_str) == 0:
             return []
         else:
             return j.loads(js_str)

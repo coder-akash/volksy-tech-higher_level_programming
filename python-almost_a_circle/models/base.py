@@ -16,7 +16,7 @@ class Base:
 
     @staticmethod
     def to_json_string(l_d):
-        if l_d is None or len(l_d):
+        if l_d is None or len(l_d) == 0:
             return j.dumps([])
         else:
             return j.dumps(l_d)

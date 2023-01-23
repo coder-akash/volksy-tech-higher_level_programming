@@ -16,7 +16,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, lst_obj):
-        with open(cls.__name__+'.json', 'w'):
+        with open(cls.__name__+'.json', 'w') as f:
             if lst_obj is None:
                 f.write("[]")
             else:

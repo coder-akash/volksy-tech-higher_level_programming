@@ -55,14 +55,14 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         try:
-            with open(cls.__name__+'.csv', "r") as f:
+            with open(cls.__name__+'.csv', "r", newline="") as f:
                 if cls.__name__ == "Rectangle":
                     field_names = ["id", "width", "height", "x", "y"]
                 else:
                     field_names = ["id", "size", "x", "y"]
                 data = csv.DictReader(f, fieldnames=field_names)
                 lst_dic = [dict([k, int(v)] for k, v in d.items())
-                        for d in data]
+                          for d in data]
                 return [cls.create(**d) for d in lst_dic]
         except IOError:
             return []

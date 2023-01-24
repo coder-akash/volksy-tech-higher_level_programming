@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ task 0 """
 import json as j
+import csv
 
 
 class Base:
@@ -61,8 +62,8 @@ class Base:
                 else:
                     field_names = ["id", "size", "x", "y"]
                 data = csv.DictReader(f, fieldnames=field_names)
-                lst_dic = [dict([k, int(v)] for k, v in d.items())
-                          for d in data]
+                lst_dic = [dict([k, int(v)] for k, v in d.items()) 
+                        for d in data]
                 return [cls.create(**d) for d in lst_dic]
         except IOError:
             return []

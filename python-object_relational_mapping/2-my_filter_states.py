@@ -8,8 +8,9 @@ if __name__ == "__main__":
     conn = mysql.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     names = sys.argv[4:]
     cur = conn.cursor()
-    q = 'SELECT * FROM states WHERE name IN {} ORDER BY id'.format(tuple(names))
+    q = 'SELECT * FROM states ORDER BY id'
     cur.execute(q)
     data = cur.fetchall()
     for i in data:
-        print(i)
+        if i in names:
+            print('{}'.format(i)

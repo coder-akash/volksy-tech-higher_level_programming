@@ -8,7 +8,7 @@ if __name__ == "__main__":
     conn = mysql.connect(user=sys.argv[1], passwd=sys.argv[2],
                          database=sys.argv[3])
     cur = conn.cursor()
-    cur.execute('SELECT * FROM cities ORDER BY id')
+    cur.execute('SELECT cities.id, cities.name, state.name FROM cities INNER JOIN states ON cities.id = states.id ORDER BY id')
     data = cur.fetchall()
     for i in data:
         print(i)

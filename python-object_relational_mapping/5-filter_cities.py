@@ -17,3 +17,5 @@ if __name__ == "__main__":
                 print(data[i][0])
             else:
                 print(data[i][0], end=', ')
+    else:
+        print()

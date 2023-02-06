@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute('''select cities.name from cities inner join states
     on cities.state_id = states.id where states.name = '{}' '''.format(name))
-    data =cur.fetchall()
+    data = cur.fetchall()
     for i in range(len(data)):
         if i == len(a) - 1:
             print(a[i][0])

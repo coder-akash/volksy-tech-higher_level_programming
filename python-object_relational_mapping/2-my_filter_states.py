@@ -12,5 +12,5 @@ if __name__ == "__main__":
     cur.execute(q)
     data = cur.fetchall()
     for i in data:
-        if i in names:
+        if i[1] in names:
             print('{}'.format(i))

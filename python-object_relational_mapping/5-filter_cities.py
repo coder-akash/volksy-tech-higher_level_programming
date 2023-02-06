@@ -9,7 +9,7 @@ if __name__ == "__main__":
     name = sys.argv[4]
     cur = conn.cursor()
     cur.execute('''select cities.name from cities inner join states
-    on cities.state_id = states.id where states.name = {}'''.format(name))
+    on cities.state_id = states.id where states.name = '{}' '''.format(name))
     data =cur.fetchall()
     for i in range(len(data)):
         if i == len(a) - 1:

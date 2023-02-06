@@ -12,7 +12,7 @@ if __name__ == "__main__":
     on cities.state_id = states.id where states.name = '{}' '''.format(name))
     data = cur.fetchall()
     for i in range(len(data)):
-        if i == len(a) - 1:
-            print(a[i][0])
+        if i == len(data) - 1:
+            print(data[i][0])
         else:
-            print(a[i][0], end=', ')
+            print(data[i][0], end=', ')

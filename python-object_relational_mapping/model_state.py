@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' task 6 '''
+
 from sqlalchemy import Column, Interger, String
 from sqlalchemy.orm import declarative_base
 

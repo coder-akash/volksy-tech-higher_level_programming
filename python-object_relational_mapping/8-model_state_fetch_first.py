@@ -12,4 +12,4 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
     s = session()
     data = s.query(State).order_by(State.id).one()
-    print('{}: {}'.format(data.id data.name)
+    print('{}: {}'.format(data.id data.name))

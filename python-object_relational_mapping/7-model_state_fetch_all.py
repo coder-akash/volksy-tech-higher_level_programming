@@ -14,3 +14,4 @@ if __name__ == "__main__":
     data = s.query(State).order_by(State.id)
     for i in data:
         print('{}: {}'.format(i.id, i.name))
+    s.close()

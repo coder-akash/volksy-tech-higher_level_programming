@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" task 8 """
+"""List first State objects from db"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
@@ -14,9 +14,9 @@ def list_first_state_obj():
 
     session = Session(engine)
 
-    q = session.query(State).first()
+    f = session.query(State).first()
 
-    if q:
+    if f:
         print("{}: {}".format(f.__dict__['id'], f.__dict__['name']))
     else:
         print("Nothing")
@@ -26,3 +26,4 @@ def list_first_state_obj():
 
 if __name__ == "__main__":
     list_first_state_obj()
+

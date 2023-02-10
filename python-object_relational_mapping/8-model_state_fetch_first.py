@@ -20,6 +20,6 @@ if __name__ == "__main__":
     if query is None:
         print("Nothing")
     else:
-        print("{}: {}".format(query.__dict['id']__, query.__['name']__))
+        print("{}: {}".format(query.__dict__['id'], query.__dict__['name']))
 
     session.close()

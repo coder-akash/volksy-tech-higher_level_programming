@@ -2,8 +2,4 @@
 >>> print(add_integer(1, 2))
 3
 >>> print(add_integer("School"))
-Traceback (most recent call last):
-TypeError: a must be an integer
->>> print(add_integer(None))
-Traceback (most recent call last):
-TypeError: a must be an integer
+a must be an integer

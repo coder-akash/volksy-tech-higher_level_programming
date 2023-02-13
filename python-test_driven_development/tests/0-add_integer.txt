@@ -3,3 +3,5 @@
 3
 >>> print(add_integer(2))
 100
+>>> print(add_integer(None))
+a must be an integer

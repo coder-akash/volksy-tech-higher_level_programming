@@ -3,3 +3,5 @@
 3
 >>> print(add_integer(4, "School"))
 b must be an integer
+>>> print(add_integer(0, 0))
+0

@@ -4,6 +4,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
+Base = __import__('model_state.py').Base
 
 
 print('hiii')

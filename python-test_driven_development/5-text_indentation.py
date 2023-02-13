@@ -5,18 +5,9 @@ these characters: ., ? and : '''
 
 def text_indentation(text):
     '''text_indentation'''
-    l = len(text)
-    c = 0
-    while c != l:
-        if text[c] in '.:?' or text[c] == '\n':
-            if text[c+1] != ' ':
-                print(text[c], end='')
-                print('\n')
-                c+=1
-            else:
-                print(text[c+1], end='')
-                print('\n')
-                c+=2
+    l = text.split()
+    for i in range(len(l)):
+        if l[i][-1] in ".:?":
+            print(l[i] + '\n')
         else:
-            print(text[c], end='')
-            c+=1
+            print(l[i], end=' ')

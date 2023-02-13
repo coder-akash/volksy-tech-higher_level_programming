@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 
 
+print('hiii')
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),

@@ -12,9 +12,9 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
     
-    session = sessionmaker(bind=engine)
-    s = session()
-    
-    data = s.query(State).order_by(State.id).filter(State.name.contains('a%'))
-    for i in data:
-        print('{}: {}'.format(i.id, i.name))
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    for state in session.query(State).order_by(State.id).filter(
+            State.name.contains('a%')):
+        print("{}: {}".format(state.id, state.name))
+    session.close()

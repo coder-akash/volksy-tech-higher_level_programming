@@ -3,11 +3,10 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from model_state import Base, State
+#from model_state import Base, State
 Base = __import__('model_state.py').Base
 
 
-print('hiii')
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),

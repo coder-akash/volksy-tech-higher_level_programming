@@ -5,7 +5,7 @@
 def print_square(size):
     ''' print_square '''
 
-    if type(size) != int and size < 0:
+    if type(size) != int:
         raise TypeError('size must be an integer')
     if size < 0:
         raise ValueError('size must be >= 0')

@@ -10,4 +10,7 @@ def text_indentation(text):
         if l[i][-1] in ".:?":
             print(l[i] + '\n')
         else:
-            print(l[i], end=' ')
+            if i == len(l)-1:
+                print(l[i])
+            else:
+                print(l[i], end=' ')

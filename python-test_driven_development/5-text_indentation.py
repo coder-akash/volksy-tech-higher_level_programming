@@ -6,15 +6,17 @@ these characters: ., ? and : '''
 def text_indentation(text):
     '''text_indentation'''
     
-    if type(text) != str:
-        raise TypeError('text must be a string')
-    l = text.split()
-    print(l)
-    for i in range(len(l)):
-        if l[i][-1] in ".:?":
-            print(l[i]+'\n')
-        else:
-            if i == len(l)-1:
-                print(l[i])
-            else:
-                print(l[i],end=' ')
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
+
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1

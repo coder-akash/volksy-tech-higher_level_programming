@@ -1,23 +1,5 @@
-how to use 0-add_integer.py
-this function basically returns addition integer for of a and  b
-
-::
-
-    >>>add_integer = __import__('0-add_integer').add_integer
-    >>>add_integer(1, 2)
-    3
-
-::
-
-    >>>add_integer(100, -2)
-    98
-::
-
-    >>>add_integer(2)
-    100
-    here only one value is present so it will replace with a i.e a=2 and in function default value 98 so b=98
-
-::
-
-    >>>add_integer(-100, 2)
-    -98
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(4, "School"))
+b must be an integer

@@ -4,6 +4,8 @@ import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import update
+
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
@@ -13,6 +15,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     s = Session()
 
-    state = s.query(State).filter(State.id==2).one()
+    state = s.query(State).filter(State.id == 2).one()
     state.name = "New Mexico"
     session.commit()

@@ -12,13 +12,22 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     s = Session()
-    name = sys.argv[4]
-    
-    query = session.query(State).filter(State.name == name)).first()
+
+    query = s.query(State).all()
+    # Create all name for states
+    list_state = []
+    for state in query:
+        list_state.append(state.name)
+
+    # Query
+    query = s.query(State).\
+        filter(State.name == "{}".format(sys.argv[4], )).first()
 
     # Conditions
     if sys.argv[4] not in list_state:
         print("Not found")
     else:
         print(query.id)
-  
+
+    # Close session
+    s.close()

@@ -13,7 +13,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     s = Session()
     name = sys.argv[4]
-
     data = s.query(State).filter_by(State.name = name).one()
     if data is None:
         print('Not found')
@@ -21,4 +20,3 @@ if __name__ == "__main__":
         print(data.id)
 
     s.close()
-'''

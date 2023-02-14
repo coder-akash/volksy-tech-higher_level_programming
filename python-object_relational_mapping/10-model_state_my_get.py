@@ -14,10 +14,11 @@ if __name__ == "__main__":
     s = Session()
     name = sys.argv[4]
     
-    data = s.query(State).filter(State.name = name).one()
-    if data is None:
-        print('Not found')
-    else:
-        print(data.id)
+    query = session.query(State).filter(State.name == name)).first()
 
+    # Conditions
+    if sys.argv[4] not in list_state:
+        print("Not found")
+    else:
+        print(query.id)
   

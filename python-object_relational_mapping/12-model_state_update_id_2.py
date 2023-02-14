@@ -13,7 +13,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
-    s = Session()
+    session = Session()
 
     update = session.query(State).filter(State.id == 2).one()
     update.name = "New Mexico"

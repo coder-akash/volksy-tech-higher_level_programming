@@ -10,23 +10,12 @@ if __name__ == "__main__":
                            format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
 
-    # Initialize engine
-    Base.metadata.create_all(engine)
-
-    # Initialize session
+    
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Add new record
     new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
 
-    # Query
-    query = session.query(State).order_by(State.id.desc()).one()
-
-    # Print query
-    print("{}".format(query.id))
-
-    # Close session
-    session.close()
+    print(new_state.id)

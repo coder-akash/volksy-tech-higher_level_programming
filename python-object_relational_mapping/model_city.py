@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class City(Base):
+    ''' cities class '''
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, nullable=False,
                 unique=True, autoincrement=True)

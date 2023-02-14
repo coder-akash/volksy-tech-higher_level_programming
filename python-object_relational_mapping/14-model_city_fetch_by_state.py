@@ -15,5 +15,5 @@ if __name__ == "__main__":
     session = Session()
 
     q = session.query(State, City).filter(State.id == City.state_id).all()
-    for s, c in query:
+    for s, c in q:
         print("{}: ({}) {}".format(s.name, c.id, c.name))

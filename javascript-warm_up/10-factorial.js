@@ -1,13 +1,11 @@
 #!/usr/bin/node
 const x = Number.parseInt(process.argv[2]);
-const f = 1;
-function fact (num, f) {
+function fact (num) {
   // console.log(num, f)
-  if (num > 1) {
-    f = f * num;
-    fact(num - 1, f);
+  if (num === 0 || isNaN(num)) {
+    return 1;
   } else {
-    console.log(f);
+    return num * fact(num - 1);
   }
 }
-fact(x, f);
+console.log(fact(x));

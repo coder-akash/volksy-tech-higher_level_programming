@@ -14,14 +14,17 @@ class Rectangle {
     }
   }
 
+  rotate () {
+    // console.log(this.width, this.height)
+    const temp = this.width;
+    this.width = this.height;
+    this.height = temp;
+    // console.log(this.width, this.height)
+  }
+
   double () {
     this.width *= 2;
     this.height *= 2;
-  }
-
-  rotate () {
-    this.width = this.height;
-    this.height = this.width;
   }
 }
 module.exports = Rectangle;

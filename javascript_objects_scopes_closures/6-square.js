@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Square extends require('./demo.js') {
+class Square extends require('./4-rectangle.js') {
   constructor (s) {
     super(s, s);
   }

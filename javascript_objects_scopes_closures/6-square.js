@@ -1,17 +1,11 @@
 #!/usr/bin/node
 
-class Square extends require('./4-rectangle.js') {
-  constructor (s) {
-    super(s, s);
-  }
-
+class Square extends require('./5-square.js') {
   charPrint (c) {
-    if (typeof c !== 'undefined') {
-      for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
-      }
+    if (c === undefined) {
+      this.print();
     } else {
-      super.print();
+      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
     }
   }
 }
